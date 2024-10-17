@@ -26,8 +26,8 @@ if (mysqli_num_rows($result) > 0) {
         <td>" . $row["tgl_pengembalian"] . "</td>
         <td>" . $row["status_peminjaman"] . "</td>
         <td>
-        <a class='action-btn' href='edit_peminjaman.php?id_peminjaman="  . $row['id_peminjaman'] . "'>Edit</a>
-        <a class='action-btn delete' href='hapus_peminjaman.php?id_peminjaman=" . $row['id_peminjaman']  . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
+        <a class='action-btn' href='edit_peminjaman.php?id_peminjaman=" . $row['id_peminjaman'] . "'>Edit</a>
+        <a class='action-btn delete' href='hapus_peminjaman.php?id_peminjaman=" . $row['id_peminjaman'] . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
         </td>
         </tr>";
     }

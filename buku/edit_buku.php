@@ -40,19 +40,22 @@ if (isset($_GET['id_buku'])) {
 ?>
 
 <html>
-    <head>
-        <body>
-        <h2>Edit Data Buku</h2>
-        <form method="POST">
-            <!--menampilkan form dengan data mobil-->
-            Judul Buku: <input type="text" name="judul" value="<?php echo $buku['judul']; ?>"><br>
-            Penulis: <input type="text" name="penulis" value="<?php echo $buku['penulis']; ?>"><br>
-            penerbit: <input type="text" name="penerbit" value="<?php echo $buku['penerbit']; ?>"><br>
-            Tahun Terbit: <input type="text" name="tahun_terbit" value="<?php echo $buku['tahun_terbit']; ?>"><br>
 
-            <!--tombol untuk perubahan-->
-            <input type="submit" value="Simpan Perubahan">
-        </form>
-        </body>
-    </head>
+<head>
+
+<body>
+    <h2>Edit Data Buku</h2>
+    <form method="POST">
+        <!--menampilkan form dengan data mobil-->
+        Judul Buku: <input type="text" name="judul" value="<?php echo $buku['judul']; ?>"><br>
+        Penulis: <input type="text" name="penulis" value="<?php echo $buku['penulis']; ?>"><br>
+        penerbit: <input type="text" name="penerbit" value="<?php echo $buku['penerbit']; ?>"><br>
+        Tahun Terbit: <input type="text" name="tahun_terbit" value="<?php echo $buku['tahun_terbit']; ?>"><br>
+
+        <!--tombol untuk perubahan-->
+        <input type="submit" value="Simpan Perubahan">
+    </form>
+</body>
+</head>
+
 </html>

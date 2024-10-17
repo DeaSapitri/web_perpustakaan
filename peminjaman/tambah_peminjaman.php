@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <form method="post">
-    <label for="id_user">User :</label>
+        <label for="id_user">User :</label>
         <select id="id_user" name="id_user" required>
             <?php
             include '../koneksi.php';

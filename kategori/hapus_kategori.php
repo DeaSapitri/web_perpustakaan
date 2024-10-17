@@ -9,7 +9,7 @@ if (isset($_GET['id_kategori'])) {
         header("Location: kategori.php"); // Redirect setelah
         exit;
     } else {
-        echo "Gagal menghapus: ".$conn->error;
+        echo "Gagal menghapus: " . $conn->error;
     }
 }
 ?>

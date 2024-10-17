@@ -9,7 +9,7 @@ if (isset($_GET['id_peminjaman'])) {
         header("Location: peminjaman.php"); // Redirect setelah
         exit;
     } else {
-        echo "Gagal menghapus: ".$conn->error;
+        echo "Gagal menghapus: " . $conn->error;
     }
 }
 ?>

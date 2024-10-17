@@ -34,16 +34,20 @@ if (isset($_GET['id_kategori'])) {
 ?>
 
 <html>
-    <head>
-        <body>
-        <h2>Edit Kategori</h2>
-        <form method="POST">
-            <!--menampilkan form dengan data mobil-->
-            Nama Kategori: <input type="text" name="nama_kategori" value="<?php echo $kategori_buku['nama_kategori']; ?>"><br>
 
-            <!--tombol untuk perubahan-->
-            <input type="submit" value="Simpan Perubahan">
-        </form>
-        </body>
-    </head>
+<head>
+
+<body>
+    <h2>Edit Kategori</h2>
+    <form method="POST">
+        <!--menampilkan form dengan data mobil-->
+        Nama Kategori: <input type="text" name="nama_kategori"
+            value="<?php echo $kategori_buku['nama_kategori']; ?>"><br>
+
+        <!--tombol untuk perubahan-->
+        <input type="submit" value="Simpan Perubahan">
+    </form>
+</body>
+</head>
+
 </html>

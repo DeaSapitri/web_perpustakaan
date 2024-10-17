@@ -3,7 +3,7 @@ include '../koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama_kategori = $_POST['nama_kategori'];
-    
+
     $sql = "INSERT INTO kategori_buku (nama_kategori) VALUES ('$nama_kategori')";
     if (mysqli_query($conn, $sql)) {
         echo "data sukses ditambahkan";

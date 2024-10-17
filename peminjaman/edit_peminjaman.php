@@ -5,31 +5,33 @@ if (isset($_GET['id_peminjaman'])) {
     $id_peminjaman = $_GET['id_peminjaman']; //mengambil IDmobil dari URL
 
     //mengambil data mobil berdasarkan ID dari database
-    $sql = "SELECT * FROM buku WHERE id_peminjaman = $id_peminjaman";
+    $sql = "SELECT * FROM peminjaman WHERE id_peminjaman = $id_peminjaman";
     $result = $conn->query($sql);
-    $buku = $result->fetch_assoc();
+    $peminjaman = $result->fetch_assoc();
 
 
     //mengecek apakah form telah dikirim
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //mengambil data yang diinputkan pengguna dari form
-        $judul = $_POST['judul'];
-        $penulis = $_POST['penulis'];
-        $penerbit = $_POST['penerbit'];
-        $tahun_terbit = $_POST['tahun_terbit'];
+        $id_user = $_POST['id_user'];
+        $id_buku = $_POST['id_buku'];
+        $tgl_peminjaman = $_POST['tgl_peminjaman'];
+        $tgl_pengembalian = $_POST['tgl_pengembalian'];
+        $status_peminjaman = $_POST['status_peminjaman'];
 
         //mengupdate data mobil dari database berdasarkan input dari form
-        $sql = "UPDATE buku SET
-        judul='$judul',
-        penulis='$penulis',
-        penerbit='$penerbit',
-        tahun_terbit='$tahun_terbit',
-        id_buku='$id_buku'
-        WHERE id_buku=$id_buku";
+        $sql = "UPDATE peminjaman SET
+        id_user='$id_user',
+        id_buku='$id_buku',
+        tgl_peminjaman='$tgl_peminjaman',
+        tgl_pengembalian='$tgl_pengembalian',
+        status_peminjaman='$status_peminjaman',
+        id_peminjaman='$id_peminjaman'
+        WHERE id_peminjaman=$id_peminjaman";
 
         //mengecek apakah proses update berhasil
         if ($conn->query($sql) === TRUE) {
-            header("Location: buku.php");
+            header("Location: peminjaman.php");
             exit;
         } else {
             //menampilkan pesan error jika gagal
@@ -42,13 +44,14 @@ if (isset($_GET['id_peminjaman'])) {
 <html>
     <head>
         <body>
-        <h2>Edit Data Buku</h2>
+        <h2>Edit Data Peminjaman</h2>
         <form method="POST">
             <!--menampilkan form dengan data mobil-->
-            Judul Buku: <input type="text" name="judul" value="<?php echo $buku['judul']; ?>"><br>
-            Penulis: <input type="text" name="penulis" value="<?php echo $buku['penulis']; ?>"><br>
-            penerbit: <input type="text" name="penerbit" value="<?php echo $buku['penerbit']; ?>"><br>
-            Tahun Terbit: <input type="text" name="tahun_terbit" value="<?php echo $buku['tahun_terbit']; ?>"><br>
+            User: <input type="text" name="id_user" value="<?php echo $peminjaman['id_user']; ?>"><br>
+            Buku Pilihan: <input type="text" name="id_buku" value="<?php echo $peminjaman['id_buku']; ?>"><br>
+            Tgl Peminjaman: <input type="date" name="tgl_peminjaman" value="<?php echo $peminjaman['tgl_peminjaman']; ?>"><br>
+            Tgl Pengembalian: <input type="date" name="tgl_pengembalian" value="<?php echo $peminjaman['tgl_pengembalian']; ?>"><br>
+            Status Peminjaman: <input type="text" name="status_peminjaman" value="<?php echo $peminjaman['status_peminjaman']; ?>"><br>
 
             <!--tombol untuk perubahan-->
             <input type="submit" value="Simpan Perubahan">

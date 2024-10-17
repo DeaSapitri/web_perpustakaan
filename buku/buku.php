@@ -24,8 +24,8 @@ if (mysqli_num_rows($result) > 0) {
         <td>" . $row["penerbit"] . "</td>
         <td>" . $row["tahun_terbit"] . "</td>
         <td>
-        <a class='action-btn' href='edit_buku.php?id_buku="  . $row['id_buku'] . "'>Edit</a>
-        <a class='action-btn delete' href='hapus_buku.php?id_buku=" . $row['id_buku']  . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
+        <a class='action-btn' href='edit_buku.php?id_buku=" . $row['id_buku'] . "'>Edit</a>
+        <a class='action-btn delete' href='hapus_buku.php?id_buku=" . $row['id_buku'] . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
         </td>
         </tr>";
     }
