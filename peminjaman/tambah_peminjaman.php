@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_buku = $_POST['id_buku'];
     $tgl_peminjaman = $_POST['tgl_peminjaman'];
     $tgl_pengembalian = $_POST['tgl_pengembalian'];
-    $status_peminjaman = $_POST['status_peminjaman'];
+    $status_peminjaman = 'Dipinjam';
 
-    $sql = "INSERT INTO peminjaman (id_user,id_buku,tgl_peminjaman,tgl_pengembalian) VALUES ('$id_user','$id_buku','$tgl_peminjaman','$tgl_pengembalian')";
+    $sql = "INSERT INTO peminjaman (id_user,id_buku,tgl_peminjaman,tgl_pengembalian, status_peminjaman) VALUES ('$id_user','$id_buku','$tgl_peminjaman','$tgl_pengembalian', '$status_peminjaman')";
     if (mysqli_query($conn, $sql)) {
         echo "data sukses ditambahkan";
         header("Location: peminjaman.php");
@@ -64,8 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="tgl_pengembalian">Tgl Pengembalian</label>
         <input type="date" id="tgl_pengembalian" name="tgl_pengembalian" required>
 
-        <label for="status_peminjaman">Status Peminjaman</label>
-        <input type="text" id="status_peminjaman" name="status_peminjaman" required>
         <input type="submit" value="Tambah">
     </form>
 </body>
