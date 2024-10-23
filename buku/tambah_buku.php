@@ -167,7 +167,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                                 <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
                                 <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit" required><br>
-                                <input type="submit" value="Tambah" class="btn btn-primary">
+                                <input type="submit" value="Tambah" class="btn btn-info">
+                                <a button type="button" class="btn btn-secondary" href="buku.php">kembali</button></a>
                             </form>
                         </div>
                     </div>

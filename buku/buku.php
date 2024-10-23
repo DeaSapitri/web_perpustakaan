@@ -1,4 +1,4 @@
-<?php
+<bu?php
 include '../koneksi.php';
 ?>
 <!DOCTYPE html>
@@ -70,10 +70,10 @@ include '../koneksi.php';
                 <a class="nav-link active" href="buku/buku.php">
                     <i class="bi bi-book"></i> Data Buku
                 </a>
-                <a class="nav-link" href="kategori/kategori.php">
+                <a class="nav-link" href="../kategori/kategori.php">
                     <i class="bi bi-bookmarks"></i> Kategori
                 </a>
-                <a class="nav-link" href="peminjaman/peminjaman.php">
+                <a class="nav-link" href="../peminjaman/peminjaman.php">
                     <i class="bi bi-journal-bookmark-fill"></i> Peminjaman
                 </a>
                 <a class="nav-link" href="laporan.php">
@@ -133,12 +133,13 @@ include '../koneksi.php';
                     </div>
                     <div class="card-body">
                         <!-- Your main content goes here -->
+                        <a button type="button" class="btn btn-secondary" href="tambah_buku.php">+ Tambah Buku</button></a><br><br>
                         <?php
                             include '../koneksi.php';
                             $query = "SELECT * FROM buku";
                             $result = mysqli_query($conn, $query);
                             if (mysqli_num_rows($result) > 0) {
-                                echo "<table border ='1' class='table table-warning'>";
+                                echo "<table border ='1' class='table table-primary'>";
                                 echo "<tr>";
                                 echo "<th>id_buku</th>";
                                 echo "<th>judul</th>";
@@ -156,8 +157,8 @@ include '../koneksi.php';
                                 <td>" . $row["penerbit"] . "</td>
                                 <td>" . $row["tahun_terbit"] . "</td>
                                 <td>
-                                <a class='btn btn-warning' href='edit_buku.php?id_buku=" . $row['id_buku'] . "'>Edit</a>
-                                <a class='btn btn-danger' href='hapus_buku.php?id_buku=" . $row['id_buku'] . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
+                                <a class='btn btn-info' href='edit_buku.php?id_buku=" . $row['id_buku'] . "'>Edit</a>
+                                <a class='btn btn-secondary' href='hapus_buku.php?id_buku=" . $row['id_buku'] . "' onclick='return confirm(\"Yakin ingin menghapus data ini?\");'>Hapus</a>
                                 </td>
                                 </tr>";
                                 }
