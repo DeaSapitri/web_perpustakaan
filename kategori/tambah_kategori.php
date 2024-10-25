@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         .sidebar .nav-link {
-            color: #333;
+            color: #0d6efd;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;
@@ -74,19 +74,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Sidebar -->
         <div class="col-md-3 col-lg-2 sidebar bg-white p-3">
             <div class="text-center mb-4">
-                <h4>Admin Panel</h4>
+                <h4>Dea's Library</h4>
             </div>
             <nav class="nav flex-column">
-                <a class="nav-link active" href="index.php">
+                <a class="nav-link active" href="../layout.php">
                     <i class="bi bi-collection"></i> Dashboard
                 </a>
-                <a class="nav-link" href="buku.php">
+                <a class="nav-link" href="../buku/buku.php">
                     <i class="bi bi-book"></i> Data Buku
                 </a>
-                <a class="nav-link" href="kategori/kategori.php">
+                <a class="nav-link" href="../kategori/kategori.php">
                     <i class="bi bi-bookmarks"></i> Kategori
                 </a>
-                <a class="nav-link" href="peminjaman/peminjaman.php">
+                <a class="nav-link" href="../peminjaman/peminjaman.php">
                     <i class="bi bi-journal-bookmark-fill"></i> Peminjaman
                 </a>
                 <a class="nav-link" href="laporan.php">
@@ -138,45 +138,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </nav>
 
                 <!-- Dashboard Cards -->
-                <div class="row mb-4">
-                    <div class="col-md-3 mb-3">
-                        <div class="card bg-primary text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Total Buku</h5>
-                                <h2 class="mb-0">150</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <div class="card bg-success text-white">
-                            <div class="card-body">
-                                <h5 class="card-title">Peminjaman</h5>
-                                <h2 class="mb-0">45</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <div class="card bg-warning text-dark">
-                            <div class="card-body">
-                                <h5 class="card-title">Pengguna</h5>
-                                <h2 class="mb-0">68</h2>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </div>
-
+                
                 <!-- Content Area -->
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0">Selamat Datang</h5>
+                        <h5 class="mb-0">Tambah Kategori</h5>
                     </div>
                     <div class="card-body">
                         <!-- Your main content goes here -->
                         <form method="post">
-                        <label for="nama_kategori">Nama Kategori</label>
-                        <input type="text" id="nama_kategori" name="nama_kategori" required>
-                        <input type="submit" value="Tambah">
+                        <label for="nama_kategori" class="form-label">Nama Kategori</label>
+                        <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" required><br>
+                        <input type="submit" value="Tambah" class="btn btn-info">
+                        <a button type="button" class="btn btn-secondary" href="kategori.php">kembali</button></a>
                     </form>
 
                     </div>

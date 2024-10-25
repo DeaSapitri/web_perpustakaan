@@ -15,7 +15,7 @@
         }
         
         .sidebar .nav-link {
-            color: #333;
+            color: #0d6efd;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;
@@ -58,13 +58,13 @@
         <!-- Sidebar -->
         <div class="col-md-3 col-lg-2 sidebar bg-white p-3">
             <div class="text-center mb-4">
-                <h4>Admin Panel</h4>
+                <h4>Dea's Library</h4>
             </div>
             <nav class="nav flex-column">
                 <a class="nav-link active" href="index.php">
                     <i class="bi bi-collection"></i> Dashboard
                 </a>
-                <a class="nav-link" href="buku.php">
+                <a class="nav-link" href="buku/buku.php">
                     <i class="bi bi-book"></i> Data Buku
                 </a>
                 <a class="nav-link" href="kategori/kategori.php">
@@ -153,11 +153,11 @@
                 <!-- Content Area -->
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="mb-0">Selamat Datang</h5>
+                        <h5 class="mb-0">Perpustakaan Dea</h5>
                     </div>
                     <div class="card-body">
                         <!-- Your main content goes here -->
-                        <p>Ini adalah halaman admin panel.</p>
+                        <p>Selamat Datang</p>
                     </div>
                 </div>
             </div>

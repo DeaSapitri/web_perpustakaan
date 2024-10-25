@@ -56,7 +56,7 @@ if (isset($_GET['id_buku'])) {
         }
 
         .sidebar .nav-link {
-            color: #333;
+            color: #0d6efd;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;
@@ -100,10 +100,10 @@ if (isset($_GET['id_buku'])) {
             <!-- Sidebar -->
             <div class="col-md-3 col-lg-2 sidebar bg-white p-3">
                 <div class="text-center mb-4">
-                    <h4>Admin Panel</h4>
+                    <h4>Dea's Library</h4>
                 </div>
                 <nav class="nav flex-column">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="../layout.php">
                         <i class="bi bi-collection"></i> Dashboard
                     </a>
                     <a class="nav-link active" href="buku.php">
