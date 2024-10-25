@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .sidebar .nav-link {
-            color: #0d6efd;
+            color: #333;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;

@@ -50,7 +50,7 @@ include 'koneksi.php';
         <a class="nav-link" href="peminjaman/peminjaman.php">Peminjaman</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Login</a>
+        <a class="nav-link disabled" href="layout.php">Login</a>
       </li>
     </ul>
   </div>

@@ -15,7 +15,7 @@
         }
         
         .sidebar .nav-link {
-            color: #0d6efd;
+            color: #333;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;
@@ -79,7 +79,7 @@
                 <a class="nav-link" href="pengaturan.php">
                     <i class="bi bi-gear"></i> Pengaturan
                 </a>
-                <a class="nav-link text-danger" href="logout.php">
+                <a class="nav-link text-danger" href="index.php">
                     <i class="bi bi-box-arrow-right"></i> Logout
                 </a>
             </nav>
@@ -116,7 +116,7 @@
                 <!-- Breadcrumb -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     </ol>
                 </nav>

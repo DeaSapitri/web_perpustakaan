@@ -21,7 +21,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
         }
 
         .sidebar .nav-link {
-            color: #0d6efd;
+            color: #333;
             padding: 0.8rem 1rem;
             border-radius: 0.3rem;
             margin: 0.2rem 0;
@@ -169,7 +169,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
                                     <td> ";
 
                                     if ($row["status_peminjaman"] === 'Dipinjam') {
-                                        echo "<a class='action-btn' ";
+                                        echo "<a class='btn btn-info' ";
                                     }
                                     echo "
                                     <a class='btn btn-info' href='edit_peminjaman.php?id_peminjaman=" . $row['id_peminjaman'] . "'>Edit</a>
