@@ -1,105 +1,182 @@
 <?php
-include 'koneksi.php';
-
-?>
-<!DOCTYPE html>
+include 'koneksi.php'
+  ?>
 <html lang="en">
+
 <head>
-  <title>Halaman</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>website perpustakan dea</title>
+  <link rel="stylesheet" href="style2.css">
   <style>
-  .fotoperpus {
-    height: 200px;
-    width: 20 0px;
-    background-image: url(image/perpus.webp);
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  .fotobuku {
-    height: 200px;
-    width: 10 0px;
-    margin-top: 10px;
-    background-image: url(image/buku.jpg);
-  }
+    body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('image/perpus.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
 
-  .fotobuku2 {
-    height: 200px;
-    background-image: url(image/buku2.jfif);
-  }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 100px;
+      background: #76ace3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 99;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: #FFFFFF;
+      user-select: none;
+    }
+
+    .navigation a {
+      position: relative;
+      font-size: 1.1em;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 40px;
+    }
+
+    .navigation a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #FFFFFF;
+      border-radius: 5px;
+      transform-origin: right;
+      transform: scalex(0);
+      transition: transform .5s;
+    }
+
+    .navigation a:hover::after {
+      transform-origin: left;
+      transform: scalex(1);
+    }
+
+    .navigation .btnlogin-popup {
+      width: 130px;
+      height: 50px;
+      background: transparent;
+      border: 2px solid #FFFFFF;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #FFFFFF;
+      font-weight: 500;
+      margin-left: 40px;
+    }
+
+    .home {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 50px 8% 0;
+    }
+
+    .home-content {
+      max-width: 630px;
+    }
+
+    .home-content h1 {
+      font-size: 50px;
+      line-height: 1.2;
+      color: #141414;
+    }
+
+    .home-content h3 {
+      font-size: 40px;
+      color: #141414;
+    }
+
+    .home-content p {
+      font-size: 16px;
+      color: #141414;
+      margin: 15px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 28px;
+      background: #76ace3;
+      border: 2px solid #666666;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+      font-size: 16px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: #003399;
+    }
   </style>
+  <script>
+    function confirmLogout(event) {
+      event.preventDefault();
+      var confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+      if (confirmLogout) {
+        window.location.href = event.target.href;
+      }
+    }
+  </script>
 </head>
+
 <body>
+  <header>
+    <h2 class="logo">Perpustakaan Dea</h2>
+    <nav class="navigation">
+      <a href="index.php">HOME</a>
+      <a href="buku/buku.php">Buku</a>
+      <a href="kategori/kategori.php">Kategori</a>
+      <a href="peminjaman/peminjaman.php">Peminjaman</a>
+      <?php
+      if (isset($_SESSION['username'])) {
 
-<div class="p-5 bg-primary text-white text-center">
-  <h1>Perpustakaan Dea</h1>
-  <p>Mari Membaca Buku</p> 
-</div>
+        echo '<a href="logout.php" onclick="confirmLogout(event)"> <i data-feather="log-out"></i> Logout</a>';
+      } else {
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="buku/buku.php">Buku</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="kategori/kategori.php">Kategori</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="peminjaman/peminjaman.php">Peminjaman</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="layout.php">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        echo '<a href="login.php"> <i data-feather="log-in"></i> Login</a>';
+      }
+      ?>
+    </nav>
+  </header>
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>About Library</h2>
-      <h5>Photo of Perpustakaan:</h5>
-      <div class="fotoperpus">Room Book</div>
-      <p>Tingkatkan wawasanmu dengan membaca</p>
-      <h3 class="mt-4">Some Links</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="buku/buku.php">Buku</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="kategori/kategori.php">Kategori</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="peminjaman/peminjaman.php">Peminjaman</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <hr class="d-sm-none">
+  <section class="home">
+    <div class="home-content">
+      <h1>Tingkatkan wawasanmu dengan Literasi</h1>
+      <h3>Dea Library's</h3>
+      <p>Menyediakan Buku Novel, Majalah, dan lain lain</p>
+      <a href="#" class="btn">Explore Book</a>
     </div>
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2020</h5>
-      <div class="fotobuku">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-
-      <h2 class="mt-5">TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2020</h5>
-      <div class="fotobuku2">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-</div>
-
-<div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Footer</p>
-</div>
-
+  </section>
+  <script src="login.php"></script>
+  </a>
 </body>
+
 </html>
