@@ -7,7 +7,7 @@ include 'koneksi.php'
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>website perpustakan dea</title>
+  <title>Website perpustakan dea</title>
   <link rel="stylesheet" href="style2.css">
   <style>
     * {
@@ -172,7 +172,7 @@ include 'koneksi.php'
       <h1>Tingkatkan wawasanmu dengan Literasi</h1>
       <h3>Dea Library's</h3>
       <p>Menyediakan Buku Novel, Majalah, dan lain lain</p>
-      <a href="#" class="btn">Explore Book</a>
+      <a href="image/galeri.php" class="btn">Explore Book</a>
     </div>
   </section>
   <script src="login.php"></script>

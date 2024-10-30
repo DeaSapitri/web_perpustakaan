@@ -13,16 +13,16 @@ if (isset($_GET['id_peminjaman'])) {
     //mengecek apakah form telah dikirim
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //mengambil data yang diinputkan pengguna dari form
-        $nama_user = $_POST['nama_user'];
-        $judul_buku = $_POST['judul_buku'];
+        $id_user = $_POST['id_user'];
+        $id_buku = $_POST['id_buku'];
         $tgl_peminjaman = $_POST['tgl_peminjaman'];
         $tgl_pengembalian = $_POST['tgl_pengembalian'];
         $status_peminjaman = $_POST['status_peminjaman'];
 
         //mengupdate data mobil dari database berdasarkan input dari form
         $sql = "UPDATE peminjaman SET
-        nama_user='$nama_user',
-        judul_buku='$judul_buku',
+        id_user='$id_user',
+        id_buku='$id_buku',
         tgl_peminjaman='$tgl_peminjaman',
         tgl_pengembalian='$tgl_pengembalian',
         status_peminjaman='$status_peminjaman',
