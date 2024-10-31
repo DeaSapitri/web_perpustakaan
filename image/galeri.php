@@ -7,12 +7,13 @@
     <style>
         .header{
             font-style: soria;
-            background-color: whitesmoke;
+            font-size: 30px;
+            background-color: #cfe0fa;
             text-align: center;
         }
 
         .card{
-            background-color: whitesmoke;
+            background-color: #cfe0fa;
             text-align: center;
             width: 300px;
             height: 400px;
@@ -49,6 +50,7 @@
             color: black;
             box-shadow: 0 0 10px skyblue;
         }
+
     </style>
 </head>
 <body>
@@ -81,6 +83,34 @@
             <img src="laut_bercerita.jfif" alt="" class="gambar">
             <h3>Laut Bercerita</h3>
             <p>Rp.78.000</p>
+            <a class="tombol" href="">Detail</a>
+        </div>
+
+        <div class="card">
+            <img src="areksa.jfif" alt="" class="gambar">
+            <h3>Areksa</h3>
+            <p>Rp.88.000</p>
+            <a class="tombol" href="">Detail</a>
+        </div>
+
+        <div class="card">
+            <img src="hello_kitty.jpg" alt="" class="gambar">
+            <h3>Hello Kitty</h3>
+            <p>Rp.65.000</p>
+            <a class="tombol" href="">Detail</a>
+        </div>
+
+        <div class="card">
+            <img src="harrypotter.jpg" alt="" class="gambar">
+            <h3>Harry Potter</h3>
+            <p>Rp.105.000</p>
+            <a class="tombol" href="">Detail</a>
+        </div>
+
+        <div class="card">
+            <img src="teluk_alaska.jpg" alt="" class="gambar">
+            <h3>Teluk Alaska</h3>
+            <p>Rp.99.000</p>
             <a class="tombol" href="">Detail</a>
         </div>
     </div>

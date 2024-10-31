@@ -4,7 +4,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
  JOIN user ON peminjaman.id_user = user.id_user JOIN buku ON peminjaman.id_buku = buku.id_buku";
 
 ?>
-<html lang="en">
+< lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -58,7 +58,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
     </style>
 </head>
 
-<body>
+<>
 
     <div class="container-fluid">
         <div class="row">
@@ -80,15 +80,10 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
                     <a class="nav-link active" href="../peminjaman/peminjaman.php">
                         <i class="bi bi-journal-bookmark-fill"></i> Peminjaman
                     </a>
-                    <a class="nav-link" href="laporan.php">
-                        <i class="bi bi-file-earmark-text"></i> Laporan
-                    </a>
                     <a class="nav-link" href="pengaturan.php">
                         <i class="bi bi-gear"></i> Pengaturan
                     </a>
-                    <a class="nav-link text-danger" href="logout.php">
-                        <i class="bi bi-box-arrow-right"></i> Logout
-                    </a>
+                    <a class="nav-link text-danger" href="../logout.php" onclick="confirmLogout(event)">Logout</a>
                 </nav>
             </div>
 
@@ -191,10 +186,6 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
     </div>
 
     <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
 <script>
     function confirmLogout(event) {
         event.preventDefault();
@@ -204,6 +195,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
         }
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -89,15 +89,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="../peminjaman/peminjaman.php">
                     <i class="bi bi-journal-bookmark-fill"></i> Peminjaman
                 </a>
-                <a class="nav-link" href="laporan.php">
-                    <i class="bi bi-file-earmark-text"></i> Laporan
-                </a>
                 <a class="nav-link" href="pengaturan.php">
                     <i class="bi bi-gear"></i> Pengaturan
                 </a>
-                <a class="nav-link text-danger" href="logout.php">
-                    <i class="bi bi-box-arrow-right"></i> Logout
-                </a>
+                <a class="nav-link text-danger" href="../logout.php" onclick="confirmLogout(event)">Logout</a>
             </nav>
         </div>
 
@@ -161,6 +156,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <!-- Bootstrap JS and Popper.js -->
+<script>
+    function confirmLogout(event) {
+        event.preventDefault();
+        var confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+        if (confirmLogout) {
+            window.location.href = event.target.href;
+        }
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

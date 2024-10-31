@@ -75,9 +75,6 @@
                     <a class="nav-link" href="peminjaman/peminjaman.php">
                         <i class="bi bi-journal-bookmark-fill"></i> Peminjaman
                     </a>
-                    <a class="nav-link" href="laporan.php">
-                        <i class="bi bi-file-earmark-text"></i> Laporan
-                    </a>
                     <a class="nav-link" href="pengaturan.php">
                         <i class="bi bi-gear"></i> Pengaturan
                     </a>
