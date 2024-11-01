@@ -4,7 +4,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
  JOIN user ON peminjaman.id_user = user.id_user JOIN buku ON peminjaman.id_buku = buku.id_buku";
 
 ?>
-< lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -57,9 +57,7 @@ $query = "SELECT peminjaman.id_peminjaman, user.nama_lengkap AS nama_user, buku.
         }
     </style>
 </head>
-
-<>
-
+<body>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->

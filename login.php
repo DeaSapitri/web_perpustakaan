@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
             <button name="submit" class="btn">Login</button>
             <a href="index.php">
                 <div class="register-link">
-                    <p>Don't have an account?<a href="#">Register</a></p>
+                    <p>Don't have an account?<a href="register.php">Register</a></p>
                 </div>
         </form>
     </div>
